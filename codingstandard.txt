@@ -1,0 +1,48 @@
+Html
+
+
+Write valid HTML
+Indentation
+Line endings
+Encoding and charset
+Special characters
+Images
+Images prefixes
+HTML anchors
+Comments
+Accessibility
+Attaching CSS and JavaScript files
+License
+
+
+php
+
+Indenting and Line Length - Use an indent of 4 spaces and don't use any tab because 
+different computers use different setting for tab. It is recommended to keep lines at 
+approximately 75-85 characters long for better code readability.
+
+Control Structures - These include if, for, while, switch, etc. Control
+ statements should have one space between the control keyword and opening parenthesis,
+ to distinguish them from function calls. You are strongly encouraged to
+ always use curly braces even in situations where they are technically optional.
+  
+
+
+css
+Terminology
+Write valid CSS
+Line endings
+Encoding of CSS files
+Naming conventions
+Values
+Selectors
+Multiple selectors
+Properties
+Shorthand properties
+Order of properties
+Properties with multiple values
+Preprocessors
+Comments
+Styles organization
+License
+    

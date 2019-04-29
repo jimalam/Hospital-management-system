@@ -1,0 +1,340 @@
+HTMl
+Write valid HTML
+All HTML code must be valid and well formed. You must validate it against the HTML specification pertaining to the project you are working on. Unless another specification is requested or needed, use HTML5 Document Type Definition:
+
+<!DOCTYPE HTML>
+Lowercase names
+Element and attribute names must be in all lower case:
+
+<!-- Correct -->
+<input name="name" type="text" />
+
+<!-- Wrong -->
+<input name="name" TYPE="text" />
+Closing tags
+Non-empty elements must have corresponding closing tags.
+
+<h1>My title</h1>
+<p>Some text</p>
+Empty elements must be followed by a corresponding closing tag:
+
+<span></span>
+Elements with a single tag, such as HR, BR, INPUT, IMG must end with >:
+
+<br>
+<hr>
+<img src="john.jpg" alt="John Doe" width="200" height="100">
+Nested elements
+Nested elements must be nested appropriately - for example:
+
+<!-- Correct -->
+<div>
+  <p>Some text</p>
+</div>
+The <p> tag and its corresponding closing tag, </p>, are both nested inside the <div> and </div> tags.
+
+If elements overlap they are not properly nested. This is illustrated in the following code:
+
+<!-- Wrong -->
+<div>
+  <p>Some text</div>
+</p>
+Attribute values
+Attribute values, even numeric attributes should be quoted—for example:
+
+<!-- Correct -->
+<input name="age" type="text" size="3" />
+
+<!-- Wrong -->
+<input name=age type=text size=3 />
+Indentation
+Use soft tabs with 2 spaces for code indentation.
+
+Use indentation consistently to enhance the readability of the code.
+
+When elements carry over more than one line of code, indent the contents of elements between the start tag and the end tag. This will make it easy to see where the element begins and ends.
+
+Example:
+
+<div class="container">
+  <header class="header">
+    <h1>Site Name<span></span></h1>
+  </header>
+  <!-- / header -->
+  <hr>
+  <nav class="navigation">
+    <ul>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+    </ul>
+  </nav>
+  <!-- / navigation -->
+</div>
+<!-- / container -->
+Line endings
+Format files with \n as the line ending (Unix line endings). Do not use \r\n (Windows line endings) or \r (Apple OS's).
+
+Encoding and charset
+Set encoding of HTML document and its charset to UTF-8 Normalization Form C (NFC):
+
+<meta charset="utf-8" />
+Special characters
+Encode special characters, for example:
+
+&amp;
+&copy;
+&raquo;
+&gt;
+HTML anchors
+When you need to link to the section inside a HTML document use ID attribute:
+
+<a href="#section">link</a>
+<div id="section"></div>
+If it isn't possible to use IDs (for example because of ASP.NET platform), use a named anchor:
+
+<a href="#section">link</a>
+<a name="section"></a>
+Comments
+Insert ending comment after closing tag of the HTML section in this format:
+
+<!-- / name-of-class-or-id -->
+Do not use starting comment.
+
+Examples:
+
+<ol class="accessibility-nav">
+  <li><a href="#navigation">Skip to navigation</a></li>
+  <li><a href="#content">Skip to content</a></li>
+  <li><a href="#sidebar">Skip to sidebar</a></li>
+</ol>
+<!-- / accessibility-nav -->
+ 
+<p>
+  <a href="#" title="Go to homepage"><em>Home</em></a>
+</p>
+<!-- / breadcrumb -->
+Accessibility
+Adhere to basic accessibility principles when writing HTML.
+
+General
+Use h1 - h6 to identify headings - Read more »
+Use structural elements to group links - Read more »
+Provide definitions for abbreviations by using the abbr and acronym elements - Read more »
+Use language attributes on html element to identify the default language of a document - Read more »
+Tables
+Use table markup to present tabular information - Read more »
+Use the scope attribute to associate header cells and data cells in data tables - Read more »
+Use the summary attribute of the table element to give an overview of data tables - Read more »
+Forms
+Provide submit buttons - Read more »
+Use alt attributes on images used as submit buttons - Read more »
+Use label elements to associate text labels with form controls - Read more »
+Use the title attribute to identify form controls when the label element cannot be used - Read more »
+Indicate required form controls - Read more »
+Images
+Use alt attributes on img elements - Read more »
+Use null alt text and no title attribute on img elements for images that Assistive Technology should ignore - Read more »
+
+css
+
+Terminology
+Concise terminology used in these standards:
+
+selector {
+  property: value;
+}
+property: value makes a declaration. Selector and declarations makes a rule.
+
+Write valid CSS
+All CSS code must be valid CSS3.
+
+When using vendor prefixed properties, you can ignore CSS validation errors it generates.
+
+Line endings
+Files should be formatted with \n as the line ending (Unix line endings), not \r\n (Windows line endings) or \r (Apple OS's).
+
+Encoding of CSS files
+Encoding of CSS files should be set to UTF-8.
+
+Naming Conventions
+Always use hyphens in class names. Do not use underscores or CamelCase notation.
+
+/* Correct */
+.sec-nav
+
+/* Wrong */
+.sec_nav
+.SecNav
+Values
+Always define generic font families like sans-serif or serif.
+
+/* Correct */
+font-family: "ff-din-web-1", Arial, Helvetica, sans-serif;
+
+/* Wrong */
+font-family: "ff-din-web-1";
+Shorten hexidecimal color values to 3 digits when possible:
+
+background: #fff;
+If you use 0 as a value, do not add a unit (px, em, etc.) after it.
+
+/* Correct */
+.nav a {
+  padding: 5px 0 5px 2px;
+}
+
+/* Wrong */
+.nav a {
+  padding: 5px 0px 5px 2px;
+}
+Do not use default values if they are not necessary to override inherited values.
+
+Selectors
+Selectors should be on a single line, with a space after the selector, followed by an opening brace. A selector should end with a closing brace on the next line. Next selector related the the previous one should be on the next line with one additional line space between them.
+
+.nav li {
+}
+
+.nav a {
+}
+Avoid very complex child and descendant selectors like:
+
+/* Wrong */
+.my-inbox .flyout-content .inner .message .inbox li div.take-action .actions ul li a {
+}
+Multiple selectors
+Multiple selectors should each be on a single line, with no space after each comma.
+
+.faqs a.open,
+.faqs a.close {
+}
+Properties
+Every declaration should be on its own line below the opening brace. Each property should:
+
+have a single sof tab with 2 spaces before the property name and a single space before the property value.
+end in a semi-colon.
+.site-name span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+Shorthand properties
+Use shorthand properties when possible.
+
+Order of properties
+Order of properties can have the following structure: box model, typography and graphic layer or order properties alphabetically.
+
+Properties with multiple values
+When properties can have multiple values, each value should be separated with a space.
+
+font-family: "Lucida Grande", "Lucida Sans Unicode", Verdana, lucida, sans-serif;
+Preprocessors
+Limit nesting to 1 level deep. Reassess any nesting more than 2 levels deep. This prevents overly-specific CSS selectors.
+Avoid large numbers of nested rules. Break them up when readability starts to be affected. Preference to avoid nesting that spreads over more than 20 lines.
+Always place @extend statements on the first lines of a declaration block.
+Where possible, group @include statements at the top of a declaration block, after any @extend statements.
+.selector-1 {
+  @extend .other-rule;
+  @include clearfix();
+  @include box-sizing(border-box);
+
+  margin: 10px;
+  padding: 10px;
+}
+Comments
+Follow the comments style used in normalize.css. The comments blocks should be maximum of 80 characters wide.
+
+This comment style is used as the separator of the main sections. There are 2 empty lines before and after it:
+
+/* ==========================================================================
+   Section comment block
+   ========================================================================== */
+The following comment style is used as the separator of the subsections of the main sections. It has 2 empty lines before it and 1 empty line after it:
+
+/* Sub-section comment block
+   ========================================================================== */
+This comment style is used for commenting particular page elements. It has 1 empty line before it and no empty lines after it (it is immediately followed by the rules):
+
+/* Pager */
+.pager {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #ccc;
+}
+Use upper case for the first letter in comments:
+
+/* Correct */
+
+/* Pager */
+
+/* Wrong */
+
+/* pager */
+Styles organization
+Follow the recommendations for writing styles described in XH Generator.
+
+
+
+PHp coding standard
+
+
+PHP follows few rules and maintains its style of coding. As there are many coders and developers all over the world, so each of them can follow different coding styles and standards but this would have raised great confusion and difficulty for a developer to understand another developers code. It would have been hard to manage and store the code for future reference. Here is where the coding standards come into play. This not only makes a code easy to read but also makes the code very easy to refer in the future. This makes the code understandable and clearer to decipher, just like a blueprint. This also makes the code more formal and industry or software oriented. Below mentioned are few guidelines that one must follow in order to maintain the standard of PHP coding.
+
+PHP tags : One must use the PHP standard tags(), rather than the shorthand tags() to delimit the PHP code.
+Commenting : Use of standard C and C++ commenting style i.e., (//) – for single line and (/* */) – for multi-line, is highly encouraged and use of Python or Perl style of commenting i.e., (#), is discouraged.
+Line length and Indentation : It is a standard recommendation to not exceed more than 75-85 characters per line of code. One must not use tabs for indentation instead use 4 spaces as it is the standard indenting method in most of the programming languages.
+Structuring the control flow statements: The control flow or conditional statements must be written in such a way so that it could be differentiated from function call statements. While writing if, for, while, switch and other control flow statements there must be one space between the keyword and the opening parenthesis.
+Example:
+filter_none
+edit
+play_arrow
+
+brightness_4
+<?php 
+  
+$n = 5; 
+if ($n > 0){ 
+    echo "Positive"; 
+} 
+elseif ($n < 0){ 
+    echo "Negative"; 
+} 
+else{ 
+    echo "Zero"; 
+} 
+  
+?> 
+Output:
+
+Positive
+Function Calls : While writing a function call statement, there must be no space between the function name and the opening paranthesis. Example:
+filter_none
+edit
+play_arrow
+
+brightness_4
+<?php 
+  
+echo testFunc(5, 6); 
+  
+function testFunc($num1, $num2) { 
+   $val = $num1 + $num2; 
+   return $val; 
+} 
+  
+?> 
+Output:
+
+11
+Naming Variables : Here are few conventions that one must follow in order to name the variables:
+Use of lower case letters to name the variables.
+Use of ‘_’ to separate the words in a variable.
+Static variable names may be started with a letter ‘s’.
+Global variable names must start a with letter ‘g’.
+Use of upper-case letters to define global constants with ‘_’ as a separator.
+Block allignment : Every block of code and curly braces must be alligned.
+Short Functions : All functions and methods must limit themselves to a single page and must not be lengthy.
+Note: The above rules a

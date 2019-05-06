@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Doctor Appointment form</title>
+</head>
+<body>
+<form action="" method="GET">
+<fieldset>
+<legend>Personal Details:</legend>
+
+<label for="name">Patientname:</label><input type="text" name="patientname" id="name" required autofocus placeholder="Your name" pattern="[a-zA-Z]{3,}" title="please enter more than  three character">
+
+<label for="email">Email:</label><input type="text" name="email" required placeholder="Your Email" pattern="[a-zA-Z]{3,}@[a-zA-Z]{3,}[.]{1}[a-zA-Z]{2,}" title="please enter in a valid email address">
+
+<label for="email">Phone:</label><input type="tel" name="phone" id="phone" required placeholder="Please enter in your phone number" pattern="[0-9]{4} [0-9]{3} [0-9]{3}" title="please enter in a phone number in this format:#### ### ###">
+<select name="country" required>
+<option value=""> </option>
+<option value="US">US</option>
+<option value="UK">UK</option>
+<option value="AUS">AUS</option>
+</select>
+</fieldset>
+<br>
+<fieldset>
+<legend> Appointment Details: </legends>
+<label for="date">Appointment date:</label><input id="date" type="date" name="date" min="2013-12-02">
+<text>Doctor name:</text>
+ <select name="Doctor name">
+ <option> </option>
+ <option>Dr.Monnojan(Gynocologist)</option>
+ <option>Dr.Anisul(neyromedicine)</option>
+ <option>Dr.Kawsar(eyespecialist)</option>
+ <option>Dr.Jahanara(cerdiologist)</option>
+ <option>Dr.Ashrafun(Kidneyspecialist)</option>
+ <option>Dr.Masum(Medicine)</option>
+ <option>Dr.Sumaiya(chest specialist)</option>
+ <option>Dr.Tamanna(Gastrology)</option>
+  </select>
+  
+<p>Do you want to see your reports? </p>
+<label for="yes ">Yes:</label><input id="yes "type="ratio" name="yes"  >
+<label for="No">No:</label><input id="No" type="ratio"  name="No"  >
+<br>
+<label for="take appointment">Do you take appointment before?</label><input id="take appointment" type="checkbox" name="take appointment" value="yes" checked>
+<br>
+<input type="submit"  href = "emailConfirmation.html" value="Submit">
+</fieldset>
+
+</form>
+</body>
+</html>
